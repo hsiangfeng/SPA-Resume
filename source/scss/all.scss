@@ -1,0 +1,217 @@
+@import "reset";
+@import "variable";
+@import "mixin";
+@import "grid";
+
+body{
+    font-family: $font-family;
+    font-size: $font-size-md;
+}
+.wrap{
+    background-image: url("/images/bg.jpg");
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow: hidden;
+}
+.container{
+    max-width: 960px;
+    margin: 0 auto;
+}
+.naber{
+    background-color: $rgba-block-75;
+    .topmain{
+        @include flex-justify-sb;
+        height: 100px;
+        .logo{
+            color:$white;
+            font-size: $font-size-lg;
+        }
+        ul{
+            display: flex;
+            li{
+                a{
+                    font-size: $font-size-lg;
+                    padding: 20px;
+                    display: inline-block;
+                    color:$white;
+                    text-decoration: none;
+                    &:hover{
+                        background-color: $white;
+                        color: $block;
+                    }
+                }
+            }
+        }
+    }
+}
+.banner{
+    height: 600px;
+    @include flex-center;
+    .banner-text{
+        width: 400px;
+        height: 200px;
+        color: $white;
+        font-size: $font-size-lg+12;
+        line-height: 200px;
+        text-align: center;
+        background-color: $rgba-block-75;
+        border-radius: 5px;
+    }
+}
+.skill{
+    text-align: center;
+    background-color: $white;
+    transform: rotate(-7deg);
+    margin-left: -80px;
+    margin-right: -80px;
+    padding:100px;
+    .skill-text{
+        transform: rotate(7deg);
+        padding:20px;
+        h3{
+            font-size: 28px;
+            font-weight: $font-bold;
+        }
+        .weblayout{
+            float: left;
+            width: 31.3333%;
+            height: 300px;
+            margin:1%;
+            padding: 1%;
+            @include clearfix;
+        }
+        .javascript{
+            float: left;
+            width: 31.3333%;
+            height: 300px;
+            margin:1%;
+            padding: 1%;
+            @include clearfix;
+        }
+        .dev{
+            float: left;
+            width: 31.3333%;
+            height: 300px;
+            margin:1%;
+            padding: 1%;
+            @include clearfix;
+        }
+        h4{
+            font-size: $font-size-lg+2;
+            font-weight: $font-bold;
+            margin: 10px 0;
+        }
+        @include clearfix;
+    }
+}
+.list{
+    list-style: disc;
+    text-align: left;
+    line-height: 40px;
+}
+.skilled{
+    background-color: $info;
+    transform:rotate(-7deg);
+    padding: 100px;
+    margin-left: -80px;
+    margin-right: -80px;
+    @include flex-center;
+    .skilled-description{
+        transform: rotate(7deg);
+        display: flex;
+        text-align: center;
+        .description-1{
+            width: 40%;
+            @include flex-justify-center;
+            flex-direction: column;
+            padding: 20px;
+            p{
+                text-align: left;
+            }
+        }
+        .description-2{
+            width: 60%;
+        }
+    }
+}
+
+.progress-group{
+    margin-bottom: 20px;
+    span{
+        display: block;
+        text-align: left;
+        margin-bottom: 5px;
+    }
+} 
+
+.progress{
+    position: relative;
+    top:0;
+    left: 0;
+    right: 0;
+    border-radius: 3px;
+    height: 20px;
+    background-color: rgba($gray, $alpha: .3);
+    .progress-html{
+        width: 80%;
+        background-color: #e26789;
+        color:$white;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        border-radius: 5px;
+        transition: all 3s;
+    }
+    .progress-css{
+        width: 80%;
+        background-color: #e26789;
+        color:$white;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        border-radius: 5px;
+    }
+    .progress-javascript{
+        width: 70%;
+        background-color: #e26789;
+        color:$white;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        border-radius: 5px;
+    }
+    .progress-jquery{
+        width: 60%;
+        background-color: #e26789;
+        color:$white;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        border-radius: 5px;
+    }
+    .progress-git{
+        width: 70%;
+        background-color: #e26789;
+        color:$white;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        border-radius: 5px;
+    }
+    .progress-server{
+        width: 65%;
+        background-color: #e26789;
+        color:$white;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        border-radius: 5px;
+    }
+}

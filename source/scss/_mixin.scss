@@ -1,0 +1,112 @@
+@import "variable";
+//box
+@mixin box-sizing(){
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+//container
+@mixin container(){
+    margin: 0 auto;
+    padding: 0 15px;
+    max-width: 960px;
+}
+@mixin container-fluid{
+    max-width: 100%;
+}
+
+//flex center
+@mixin flex-center(){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-justify-sb(){
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+@mixin flex-justify-center(){
+    display: flex;
+    justify-content: center;
+}
+@mixin flex-align-center(){
+    display: flex;
+    align-items: center;
+}
+
+//圖片居中
+@mixin bg-cover(){
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+@mixin bg-block(){
+    background-color: $block;
+}
+//文字隱藏
+@mixin text-hide(){
+    overflow: hidden;
+    text-indent: 101%;
+    white-space: nowrap;
+}
+//浮動清除
+@mixin clearfix(){
+    &::before,
+    &::after{
+        display: block;
+        content: "";
+    }
+    &:after{
+        clear: both;
+    }
+}
+@mixin white-main(){
+    display: none;
+    color:$white;
+}
+@mixin d-none(){
+    display:none;
+}
+@mixin d-active(){
+    display: block;
+}
+@mixin mx-auto(){
+    margin: 0 auto;
+}
+@mixin my-auto(){
+    margin: auto 0;
+}
+@mixin round-img-200(){
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-position: center center;
+    background-size: cover;
+}
+
+//雙邊線
+@mixin border-line(){
+    &::before,
+    &::after{
+        border-top: 1px solid #979797;
+        flex:1;
+        content: "";
+        margin: 0 1rem;
+    }
+}
+//關注
+@mixin input-focus(){
+    & input[type="text"]:focus,
+    & input[type="tel"]:focus,
+    & input[type="email"]:focus,
+    & input[type="number"]:focus,
+    & input[type="password"]:focus,
+    & input[type="submit"]:focus, 
+    & input[type="reset"]:focus,
+    & input[type="search"]:focus{
+        box-shadow: 0px 0px  10px $blue;
+    }
+}
