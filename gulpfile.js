@@ -74,6 +74,9 @@ gulp.task('image-min', function () {
     gulp.src('./source/images/*')
         .pipe($.if(options.env === 'production', $.imagemin()))
         .pipe(gulp.dest('./public/images'))
+    gulp.src('./source/images/**/*')
+        .pipe($.if(options.env === 'production', $.imagemin()))
+        .pipe(gulp.dest('./public/images'))
 });
 
 //執行webserver
@@ -88,8 +91,14 @@ gulp.task('browser-sync', function () {
 //監控
 gulp.task('watch', function () {
     gulp.watch('./source/scss/*.scss', ['sass']);
+    gulp.watch('./source/js/*.js', ['js']);
     gulp.watch('./source/*.jade', ['jade']);
 });
+
+gulp.task('deploy', function() {
+    return gulp.src('./public/**/*')
+      .pipe($.ghPages());
+  });
 
 //依照順序執行
 gulp.task('bulid', gulpSequence('clean', 'jade', 'sass', 'babel','image-min'))

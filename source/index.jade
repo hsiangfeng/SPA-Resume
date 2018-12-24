@@ -4,91 +4,135 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        title Document
+        title 關於我 - Ray 的個人簡介
         link(rel="stylesheet", href="https://use.fontawesome.com/releases/v5.6.3/css/all.css")
         link(rel="stylesheet", href="css/all.css")
     body
     .wrap
-        header 
+        header#index
             nav.naber
                 .topmain.container
-                    .logo 個人履歷簡介
+                    .logo 
+                        a(href="#index" class="scrollTop") 個人履歷
                     ul 
                         li 
-                            a(href="#") 主要技能 
+                            a(href="#skill" class="scrollTop") 技能 
                         li 
-                            a(href="#") 技能熟練度
+                            a(href="#skilled" class="scrollTop") 技能熟練度
                         li 
-                            a(href="#") 個人簡介
-            .banner 
+                            a(href="#profile" class="scrollTop") 個人簡介
+            .banner
                 .banner-text 歡迎來到我的個人履歷。
-        section.skill
+        section.skill#skill
             .skill-text
-                h3 主要技能
+                h3 技能
                 ul.container
-                    li.weblayout
+                    li.skill-list
                         i.fa.fa-mobile.fa-5x
                         h4 Web Layout
                         ul.list
                             li Responsive Web Design(RWD)
                             li Bootstrap 4
-                    li.javascript
+                    li.skill-list
                         i.fa.fa-code.fa-5x
-                        h4 JavaScript & Node.js
+                        h4 JavaScript
                         ul.list
                             li JavaScript
                             li JQuery
                             li AJAX/JSON
-                    li.dev 
+                    li.skill-list
                         i.fab.fa-html5.fa-5x
                         h4 Dev Helper
                         ul.list
                             li Gulp
                             li Git&GitHub
                             li 碼雲
-        section.skilled
-            .skilled-description.container
-                .description-1
-                    i.fas.fa-laptop-code.fa-5x
-                    p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus deleniti iste quas ut sapiente quidem iusto adipisci optio sint. Neque sequi vel quos quidem nihil et accusantium fugit nam rerum!
-                .description-2
+        section.skilled#skilled
+            
+            .skilled-description
+                h3 技能熟練度
+                .description.container
                     .progress-group
                         span.fab.fa-html5.fa-2x HTML
                         .progress
-                            .progress-html
-                                | 85
+                            .progress-bar(data-progress="80")
+                                | 80
 
                     .progress-group
                         span.fab.fa-css3-alt.fa-2x CSS
                         .progress
-                            .progress-css
+                            .progress-bar(data-progress="80")
                                 | 80
 
                     .progress-group
                         span.fab.fa-js.fa-2x JavaScript
                         .progress
-                            .progress-javascript
+                            .progress-bar(data-progress="70")
                                 | 70
 
                     .progress-group
                         span.fab.fa-js.fa-2x jQuery
                         .progress
-                            .progress-jquery
+                            .progress-bar(data-progress="60")
                                 | 60
 
                     .progress-group
                         span.fab.fa-github-square.fa-2x GitHub
                         .progress
-                            .progress-git
+                            .progress-bar(data-progress="70")
                                 | 70
 
                     .progress-group
                         span.fas.fa-server.fa-2x Server
                         .progress
-                            .progress-server
+                            .progress-bar(data-progress="65")
                                 | 65
 
-        section.profile.container
+        section.profile.container#profile
+            .profile-bg
+                p 歡迎您來到我的個人履歷，我是Ray。
+                br
+                | 在學期間擔任過專案經理人，負責過的專案管理有以下:十二年國教、線上考照平台、部分網站管理。
+                br
+                | 退伍後第一份工作擔任資訊工程師，主要業務職掌是使用CMS自行架設Server，建立屬於公司的內部網站，其中還有協助將傳統作業轉換資訊化並導入GSuite雲端以及指紋打卡系統等。
+                br
+                | 離職後至第二份工作擔任前端工程師，主要負責公司形象網站，網站主要使用Bootstrap+CSS配合Thinkphp(php框架)並配合碼雲管制原始碼，後期開發轉用Sass及Gulp。
+        section.works
+            .works-group
+                h3 作品集
+                .works-list.container
+                    .works-img
+                        a(href="")
+                            img(src="images/slide/1.png", alt="")
+                            .Desc
+                            | Description 1
+                    .works-img
+                        a(href="")
+                            img(src="images/slide/2.png", alt="")
+                            .Desc
+                            | Description 1
+                    .works-img
+                        a(href="")
+                            img(src="images/slide/3.png", alt="")
+                            .Desc
+                            | Description 1
+                    .works-img
+                        a(href="")
+                            img(src="images/slide/4.png", alt="")
+                            .Desc
+                            | Description 1
+                    .works-img
+                        a(href="")
+                            img(src="images/slide/5.png", alt="")
+                            .Desc
+                            | Description 1
+                    .works-img
+                        a(href="")
+                            img(src="images/slide/6.png", alt="")
+                            .Desc
+                            | Description 1
+
         footer.footer
             | © 2018 Ray. ALL RIGHTS RESERVED
+    script(src="https://code.jquery.com/jquery-3.3.1.min.js")
     script(src="js/all.js")

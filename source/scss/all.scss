@@ -20,18 +20,28 @@ body{
 }
 .naber{
     background-color: $rgba-block-75;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index:10;
     .topmain{
         @include flex-justify-sb;
         height: 100px;
         .logo{
             color:$white;
             font-size: $font-size-lg;
+            a{
+                color:$white;
+                text-decoration: none;
+                padding:20px;
+            }
         }
         ul{
             display: flex;
             li{
                 a{
-                    font-size: $font-size-lg;
+                    font-size: $font-size-md;
                     padding: 20px;
                     display: inline-block;
                     color:$white;
@@ -40,23 +50,30 @@ body{
                         background-color: $white;
                         color: $block;
                     }
+                    @include moblie576(){
+                        padding: 10px;
+                    }
                 }
             }
+            
         }
     }
 }
 .banner{
     height: 600px;
     @include flex-center;
+    padding:0 15px;
     .banner-text{
         width: 400px;
         height: 200px;
         color: $white;
-        font-size: $font-size-lg+12;
+        font-size: $font-size-lg+8;
         line-height: 200px;
         text-align: center;
         background-color: $rgba-block-75;
         border-radius: 5px;
+        display: none;
+        padding: 0 15px;
     }
 }
 .skill{
@@ -70,32 +87,21 @@ body{
         transform: rotate(7deg);
         padding:20px;
         h3{
-            font-size: 28px;
+            font-size: 32px;
             font-weight: $font-bold;
+            margin-bottom: 50px;
         }
-        .weblayout{
+        .skill-list{
             float: left;
             width: 31.3333%;
             height: 300px;
             margin:1%;
             padding: 1%;
             @include clearfix;
-        }
-        .javascript{
-            float: left;
-            width: 31.3333%;
-            height: 300px;
-            margin:1%;
-            padding: 1%;
-            @include clearfix;
-        }
-        .dev{
-            float: left;
-            width: 31.3333%;
-            height: 300px;
-            margin:1%;
-            padding: 1%;
-            @include clearfix;
+            @include moblie576(){
+                float: none;
+                width: 100%;
+            }
         }
         h4{
             font-size: $font-size-lg+2;
@@ -119,19 +125,17 @@ body{
     @include flex-center;
     .skilled-description{
         transform: rotate(7deg);
-        display: flex;
         text-align: center;
-        .description-1{
-            width: 40%;
-            @include flex-justify-center;
-            flex-direction: column;
-            padding: 20px;
-            p{
-                text-align: left;
-            }
+        h3{
+            font-size: 32px;
+            font-weight: $font-bold;
+            margin-bottom: 50px;
         }
-        .description-2{
-            width: 60%;
+        .description{
+            width: 100vw;
+            @include moblie576(){
+                padding: 0 15px;
+            }
         }
     }
 }
@@ -153,65 +157,56 @@ body{
     border-radius: 3px;
     height: 20px;
     background-color: rgba($gray, $alpha: .3);
-    .progress-html{
-        width: 80%;
+    .progress-bar{
         background-color: #e26789;
         color:$white;
         position: absolute;
+        width: 0;
         top: 0;
         left: 0;
         bottom: 0;
         border-radius: 5px;
-        transition: all 3s;
+        transition: width 3s ease;
     }
-    .progress-css{
-        width: 80%;
-        background-color: #e26789;
+}
+.profile{
+    padding: 100px 15px 0 15px;
+    height: 500px;
+    .profile-bg{
+        background-color: $rgba-block-75;
+        padding: 20px;
         color:$white;
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
+        line-height: 40px;
         border-radius: 5px;
     }
-    .progress-javascript{
-        width: 70%;
-        background-color: #e26789;
-        color:$white;
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        border-radius: 5px;
+}
+.works{
+    padding: 100px 15px 0 15px;
+    transform:rotate(7deg);
+    margin-left: -81px;
+    margin-right: -81px;
+    background-color: $info;
+    text-align: center;
+    .works-group{
+        transform:rotate(-7deg);
+        h3{
+            font-size: 32px;
+            font-weight: $font-bold;
+            margin-bottom: 50px;
+        }
+        .works-list{
+            @include flex-center;
+            flex-wrap: wrap;
+        }
     }
-    .progress-jquery{
-        width: 60%;
-        background-color: #e26789;
-        color:$white;
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        border-radius: 5px;
+    img{
+        width: 300px;
     }
-    .progress-git{
-        width: 70%;
-        background-color: #e26789;
-        color:$white;
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        border-radius: 5px;
-    }
-    .progress-server{
-        width: 65%;
-        background-color: #e26789;
-        color:$white;
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        border-radius: 5px;
-    }
+}
+.footer{
+    @include flex-center;
+    height: 50px;
+    margin-top:50px;
+    background-color: $rgba-block-75;
+    color:$white;
 }
