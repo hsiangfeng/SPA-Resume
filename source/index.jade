@@ -21,6 +21,8 @@ html(lang="en")
                             a(href="#skilled" class="scrollTop") 技能熟練度
                         li 
                             a(href="#profile" class="scrollTop") 個人簡介
+                        li 
+                            a(href="#works" class="scrollTop") 作品集
             .banner
                 .banner-text 歡迎來到我的個人履歷。
         section.skill#skill
@@ -48,7 +50,6 @@ html(lang="en")
                             li Git&GitHub
                             li 碼雲
         section.skilled#skilled
-            
             .skilled-description
                 h3 技能熟練度
                 .description.container
@@ -92,45 +93,68 @@ html(lang="en")
             .profile-bg
                 p 歡迎您來到我的個人履歷，我是Ray。
                 br
-                | 在學期間擔任過專案經理人，負責過的專案管理有以下:十二年國教、線上考照平台、部分網站管理。
+                | 在學期間曾擔任過專案經理人，負責過的專案管理有以下：十二年國教、線上考照平台、部分網站等專案管理。
                 br
-                | 退伍後第一份工作擔任資訊工程師，主要業務職掌是使用CMS自行架設Server，建立屬於公司的內部網站，其中還有協助將傳統作業轉換資訊化並導入GSuite雲端以及指紋打卡系統等。
+                | 退伍後第一份工作擔任資訊工程師，主要業務職掌是使用CMS並自行架設Server，建立屬於公司的內部網站，其中還有協助將傳統作業轉換資訊化並導入GSuite雲端以及指紋打卡系統等。
                 br
                 | 離職後至第二份工作擔任前端工程師，主要負責公司形象網站，網站主要使用Bootstrap+CSS配合Thinkphp(php框架)並配合碼雲管制原始碼，後期開發轉用Sass及Gulp。
-        section.works
+                .profile-contact
+                    a(href="#")
+                        i.fas.fa-envelope
+                    a(href="#")
+                        i.fab.fa-facebook-square
+                    a(href="#")
+                        i.fab.fa-github-square
+        section.works#works
             .works-group
                 h3 作品集
                 .works-list.container
                     .works-img
-                        a(href="")
+                        a(href="" target="_black")
                             img(src="images/slide/1.png", alt="")
                             .Desc
-                            | Description 1
+                            | 六角西餐廳
                     .works-img
-                        a(href="")
+                        a(href="" target="_black")
                             img(src="images/slide/2.png", alt="")
                             .Desc
-                            | Description 1
+                            | AQI空污參考
                     .works-img
-                        a(href="")
+                        a(href="" target="_black")
                             img(src="images/slide/3.png", alt="")
                             .Desc
-                            | Description 1
+                            | 高雄市文化局
                     .works-img
-                        a(href="")
+                        a(href="" target="_black")
                             img(src="images/slide/4.png", alt="")
                             .Desc
-                            | Description 1
+                            | 高雄旅遊資訊網
                     .works-img
-                        a(href="")
+                        a(href="" target="_black")
                             img(src="images/slide/5.png", alt="")
                             .Desc
-                            | Description 1
+                            | 六角西餐廳
                     .works-img
-                        a(href="")
+                        a(href="" target="_black")
                             img(src="images/slide/6.png", alt="")
                             .Desc
-                            | Description 1
+                            | 甜點電商
+        section.more
+            .more-text 
+                a(href="https://github.com/hsiangfeng" target="_black")
+                    | 關於Ray更多作品 
+                    br
+                    i.fab.fa-github-square.fa-2x
+        section.contact
+            .contact-text 
+                | 聯絡 Ray
+                br
+                a(href="#")
+                    i.fas.fa-envelope
+                a(href="#")
+                    i.fab.fa-facebook-square
+                a(href="#")
+                    i.fab.fa-github-square
 
         footer.footer
             | © 2018 Ray. ALL RIGHTS RESERVED

@@ -119,9 +119,9 @@ body{
 .skilled{
     background-color: $info;
     transform:rotate(-7deg);
-    padding: 100px;
-    margin-left: -80px;
-    margin-right: -80px;
+    padding: 100px 0;
+    margin-left: -100px;
+    margin-right: -100px;
     @include flex-center;
     .skilled-description{
         transform: rotate(7deg);
@@ -133,9 +133,7 @@ body{
         }
         .description{
             width: 100vw;
-            @include moblie576(){
-                padding: 0 15px;
-            }
+            padding: 0 15px;
         }
     }
 }
@@ -170,8 +168,8 @@ body{
     }
 }
 .profile{
-    padding: 100px 15px 0 15px;
-    height: 500px;
+    padding: 10% 15px;
+    height: 600px;
     .profile-bg{
         background-color: $rgba-block-75;
         padding: 20px;
@@ -179,12 +177,30 @@ body{
         line-height: 40px;
         border-radius: 5px;
     }
+    .profile-contact{
+        text-align: right;
+        a{
+            color:$white;
+            padding: 10px;
+            font-size: 18px;
+            transition: all .5s;
+            &:hover{
+                background-color: $white;
+                color:$block;
+                border-radius: 5px;
+            }
+        }
+    }
+    
+    @include moblie576{
+        height: auto;
+    }
 }
 .works{
-    padding: 100px 15px 0 15px;
+    padding: 100px;
     transform:rotate(7deg);
-    margin-left: -81px;
-    margin-right: -81px;
+    margin-left: -100px;
+    margin-right: -100px;
     background-color: $info;
     text-align: center;
     .works-group{
@@ -197,10 +213,78 @@ body{
         .works-list{
             @include flex-center;
             flex-wrap: wrap;
+            .works-img{
+                margin-bottom: 20px;
+                padding: 10px;
+                
+            }
+            a{
+                color:$white;
+                text-decoration: none;
+            }
         }
     }
     img{
-        width: 300px;
+        max-width: 300px;
+        border: 1px solid $block;
+    }
+}
+.more{
+    background-image: url("/images/bg1.jpg");
+    @include bg-cover;
+    height: 600px;
+    @include flex-center;
+    padding:0 95px;
+    transform: rotate(7deg);
+    margin: 0 -81px;
+    .more-text{
+        width: 400px;
+        height: 200px;
+        font-size: $font-size-lg+8;
+        line-height: 100px;
+        text-align: center;
+        background-color: $rgba-block-35;
+        transform: rotate(-7deg);
+        border-radius: 5px;
+        padding: 0 15px;
+        transition: all .5s;
+        a{
+            display: block;
+            color: $white;
+            text-decoration: none;
+        }
+        &:hover{
+            background-color: $rgba-block-75;
+        }
+    }
+}
+
+.contact{
+    height: 600px;
+    @include flex-center;
+    padding: 0px 15px;
+    transform: rotate(7deg);
+    color: $white;
+    .contact-text{
+        width: 400px;
+        font-size: $font-size-lg+8;
+        line-height: 100px;
+        text-align: center;
+        background-color: $rgba-block-75;
+        transform: rotate(-7deg);
+        border-radius: 5px;
+        padding: 0 15px;
+        a{
+            color: $white;
+            text-decoration: none;
+            padding: 30px;
+            transition: all .5s;
+            &:hover{
+                background-color: $white;
+                color:$block;
+                border-radius: 5px;
+            }
+        }
     }
 }
 .footer{
