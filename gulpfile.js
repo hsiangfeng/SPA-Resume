@@ -20,10 +20,6 @@ gulp.task('clean', function () {
         .pipe($.clean());
 });
 
-gulp.task('copyHTML', function () {
-    return gulp.src('./source/**/*.html')
-        .pipe(gulp.dest('./public/'));
-});
 //編譯jade生成html
 gulp.task('jade', function () {
     // var YOUR_LOCALS = {};
@@ -54,7 +50,7 @@ gulp.task('sass', function () {
 });
 //生成js
 gulp.task('babel', () =>
-    gulp.src('./source/js/**/*.js')
+    gulp.src(['./source/js/**/jquery-3.3.1.min.js','./source/js/**/*.js'])
         .pipe($.sourcemaps.init())
         .pipe($.babel({
             presets: ['@babel/env']

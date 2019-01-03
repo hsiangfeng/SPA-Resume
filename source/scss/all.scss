@@ -8,7 +8,7 @@ body{
     font-size: $font-size-md;
 }
 .wrap{
-    background-image: url("/images/bg.jpg");
+    background-image: url(../images/bg.jpg);
     background-position: center center;
     background-attachment: fixed;
     background-size: cover;
@@ -230,7 +230,7 @@ body{
     }
 }
 .more{
-    background-image: url("/images/bg1.jpg");
+    background-image: url(../images/bg1.jpg);
     @include bg-cover;
     height: 600px;
     @include flex-center;
