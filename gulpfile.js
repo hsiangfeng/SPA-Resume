@@ -50,7 +50,7 @@ gulp.task('sass', function () {
 });
 //生成js
 gulp.task('babel', () =>
-    gulp.src(['./source/js/**/jquery-3.3.1.min.js','./source/js/**/*.js'])
+    gulp.src(['./source/js/**/jquery-3.3.1.min.js', './source/js/**/*.js'])
         .pipe($.sourcemaps.init())
         .pipe($.babel({
             presets: ['@babel/env']
@@ -91,13 +91,13 @@ gulp.task('watch', function () {
     gulp.watch('./source/*.jade', ['jade']);
 });
 
-gulp.task('deploy', function() {
+gulp.task('deploy', function () {
     return gulp.src('./public/**/*')
-      .pipe($.ghPages());
-  });
+        .pipe($.ghPages());
+});
 
 //依照順序執行
-gulp.task('bulid', gulpSequence('clean', 'jade', 'sass', 'babel','image-min'))
+gulp.task('bulid', gulpSequence('clean', 'jade', 'sass', 'babel', 'image-min'))
 
 //預設執行
-gulp.task('default', ['jade', 'sass', 'babel','image-min' ,'browser-sync', 'watch']);
+gulp.task('default', ['jade', 'sass', 'babel', 'image-min', 'browser-sync', 'watch']);
