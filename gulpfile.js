@@ -67,10 +67,7 @@ gulp.task('babel', () =>
 );
 //壓縮image並生成image
 gulp.task('image-min', function () {
-    gulp.src('./source/images/*')
-        .pipe($.if(options.env === 'production', $.imagemin()))
-        .pipe(gulp.dest('./public/images'))
-    gulp.src('./source/images/**/*')
+    gulp.src(['./source/images/*','./source/images/**/*'])
         .pipe($.if(options.env === 'production', $.imagemin()))
         .pipe(gulp.dest('./public/images'))
 });
