@@ -1,5 +1,5 @@
 {
-  "name": "project",
+  "name": "spa-resume",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -29,7 +29,6 @@
     "gulp-sequence": "^1.0.0",
     "gulp-sourcemaps": "^2.6.4",
     "gulp-uglify": "^3.0.1",
-    "image-min": "^0.3.2",
     "main-bower-files": "^2.13.1",
     "minimist": "^1.2.0"
   }
