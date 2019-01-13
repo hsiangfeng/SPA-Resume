@@ -169,11 +169,19 @@ body{
 }
 .profile{
     padding: 10% 15px;
-    height: 600px;
+    height: 700px;
+    text-align: center;
+    h3{
+        font-size: 32px;
+        font-weight: $font-bold;
+        margin-bottom: 50px;
+        color:$white;
+    }
     .profile-bg{
         background-color: $rgba-block-75;
         padding: 20px;
         color:$white;
+        text-align: left;
         line-height: 40px;
         border-radius: 5px;
     }
