@@ -43,7 +43,7 @@ gulp.task('sass', function () {
         .pipe($.sass().on('error', $.sass.logError))
         //編譯完成CSS
         .pipe($.postcss(plugins))
-        .pipe($.if(options.env === 'production', $.cleanCss()))
+        .pipe($.if(options.env === 'prod', $.cleanCss())) //production
         .pipe($.sourcemaps.write('.'))
         .pipe(gulp.dest('./public/css'))
         .pipe(browserSync.stream())
@@ -56,7 +56,7 @@ gulp.task('babel', () =>
             presets: ['@babel/env']
         }))
         .pipe($.concat('all.js'))
-        .pipe($.if(options.env === 'production', $.uglify({
+        .pipe($.if(options.env === 'prod', $.uglify({ //production
             compress: {
                 drop_console: true
             }
@@ -68,7 +68,7 @@ gulp.task('babel', () =>
 //壓縮image並生成image
 gulp.task('image-min', function () {
     gulp.src(['./source/images/*','./source/images/**/*'])
-        .pipe($.if(options.env === 'production', $.imagemin()))
+        .pipe($.if(options.env === 'prod', $.imagemin())) //production
         .pipe(gulp.dest('./public/images'))
 });
 
