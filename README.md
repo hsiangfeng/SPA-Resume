@@ -6,4 +6,4 @@ https://hsiangfeng.github.io/SPA-Resume/
 使用方式:  
 `npm install`  
 啟用:  
-``
+`gulp`
